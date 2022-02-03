@@ -67,6 +67,16 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::lesson.lesson"
+    },
+    "last_name": {
+      "type": "string"
+    },
+    "first_name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "biginteger",
+      "unique": true
     }
   }
 }
