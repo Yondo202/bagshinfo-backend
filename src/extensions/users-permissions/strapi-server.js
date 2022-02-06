@@ -18,6 +18,20 @@ module.exports = plugin => {
   
       ctx.body = sanitizeOutput(user);
     };
+
+    plugin.controllers.user.findOne = async (ctx) => {
+        //   if (!ctx.state.user) {
+        //     return ctx.unauthorized();
+        //   }
+
+      const user = await strapi.entityService.findOne(
+        'plugin::users-permissions.user',
+        ctx.params.id,
+        { populate: ['role', 'lessons'] }
+      );
+  
+      ctx.body = sanitizeOutput(user);
+    };
   
     plugin.controllers.user.find = async (ctx) => {
       const users = await strapi.entityService.findMany(
