@@ -74,8 +74,31 @@
     "first_name": {
       "type": "string"
     },
+    "short_presentation": {
+      "type": "richtext"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "profile_image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
     "phone": {
-      "type": "biginteger",
+      "type": "string",
       "unique": true
     }
   }

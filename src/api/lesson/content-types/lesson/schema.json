@@ -1,10 +1,12 @@
 {
   "kind": "collectionType",
   "collectionName": "lessons",
+  "collection": "lessons",
   "info": {
     "singularName": "lesson",
     "pluralName": "lessons",
-    "displayName": "lesson"
+    "displayName": "Хичээлүүд",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
