@@ -63,43 +63,15 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "lessons": {
+    "profile": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::lesson.lesson"
+      "relation": "oneToOne",
+      "target": "api::profile.profile",
+      "mappedBy": "user"
     },
-    "last_name": {
-      "type": "string"
-    },
-    "first_name": {
-      "type": "string"
-    },
-    "short_presentation": {
-      "type": "richtext"
-    },
-    "cover_image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
-    "profile_image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ]
-    },
-    "phone": {
-      "type": "string",
-      "unique": true
+    "teacher": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
