@@ -72,6 +72,9 @@
     "teacher": {
       "type": "boolean",
       "default": false
+    },
+    "address_name": {
+      "type": "string"
     }
   }
 }

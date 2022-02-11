@@ -13,7 +13,7 @@ module.exports = plugin => {
       const user = await strapi.entityService.findOne(
         'plugin::users-permissions.user',
         ctx.state.user.id,
-        { populate: ['role', 'lessons'] }
+        { populate: ['profile'] }
       );
   
       ctx.body = sanitizeOutput(user);
@@ -27,7 +27,7 @@ module.exports = plugin => {
       const user = await strapi.entityService.findOne(
         'plugin::users-permissions.user',
         ctx.params.id,
-        { populate: ['role', 'lessons'] }
+        { populate: ['profile'] }
       );
   
       ctx.body = sanitizeOutput(user);
@@ -36,7 +36,7 @@ module.exports = plugin => {
     plugin.controllers.user.find = async (ctx) => {
       const users = await strapi.entityService.findMany(
         'plugin::users-permissions.user',
-        { ...ctx.params, populate: ['role', 'lessons'] }
+        { ...ctx.params, populate: ['profile'] }
       );
   
       ctx.body = users.map(user => sanitizeOutput(user));
